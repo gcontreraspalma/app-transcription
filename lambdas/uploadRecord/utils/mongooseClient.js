@@ -1,24 +1,20 @@
 // mongooseClient.js
 const mongoose = require('mongoose');
 
-let cachedConnection = null;
+let isConnected = false;
 
 const connectToDatabase = async (uri) => {
-    if (cachedConnection) {
-        return cachedConnection;
+    if (isConnected) {
+        console.log('Usando conexión existente a MongoDB');
+        return;
     }
-
-    // Configuraciones recomendadas para evitar advertencias de Mongoose
-    mongoose.set('strictQuery', false);
-    mongoose.set('strictPopulate', false);
-
-    // Conectar a MongoDB
-    cachedConnection = await mongoose.connect(uri, {
+    
+    console.log('Creando una nueva conexión a MongoDB');
+    await mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
-
-    return cachedConnection;
+    isConnected = true;
 };
 
 module.exports = connectToDatabase;
