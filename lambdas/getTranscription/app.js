@@ -1,5 +1,5 @@
 // getTranscription.js
-const connectToDatabase = require('./mongooseClient');
+const connectToDatabase = require('./utils/mongooseClient');
 const Transcription = require('./models/Transcription');
 const jwt = require('jsonwebtoken');
 

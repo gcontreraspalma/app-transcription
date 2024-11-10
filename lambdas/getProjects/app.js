@@ -1,5 +1,5 @@
 // getProjects.js
-const connectToDatabase = require('./mongooseClient');
+const connectToDatabase = require('./utils/mongooseClient');
 const Project = require('./models/Project');
 
 exports.handler = async (event) => {

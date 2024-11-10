@@ -1,5 +1,5 @@
 // login.js
-const connectToDatabase = require('./mongooseClient');
+const connectToDatabase = require('./utils/mongooseClient');
 const User = require('./models/User');
 const jwt = require('jsonwebtoken');
 
