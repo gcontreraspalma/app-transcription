@@ -1,6 +1,7 @@
 // getProjects.js
 const connectToDatabase = require('./utils/mongooseClient');
 const Project = require('./models/Project');
+const jwt = require('jsonwebtoken');
 
 exports.handler = async (event) => {
     try {

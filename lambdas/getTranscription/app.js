@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 exports.handler = async (event) => {
     try {
         // Verificar que el token JWT esté presente
-        const token = event.headers.Authorization?.split(' ')[1];
+        const token = event.headers.authorization?.split(' ')[1];
         if (!token) {
             return {
                 statusCode: 401,
