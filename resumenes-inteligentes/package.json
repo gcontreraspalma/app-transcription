@@ -1,0 +1,33 @@
+{
+  "name": "resumenes-inteligentes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.0.2",
+    "@react-navigation/native": "^7.0.14",
+    "@react-navigation/native-stack": "^7.2.0",
+    "axios": "^1.7.9",
+    "expo": "~52.0.18",
+    "expo-asset": "~11.0.1",
+    "expo-av": "~15.0.1",
+    "expo-constants": "~17.0.3",
+    "expo-file-system": "~18.0.5",
+    "expo-secure-store": "~14.0.0",
+    "expo-status-bar": "~2.0.0",
+    "groq-sdk": "^0.9.0",
+    "react": "18.3.1",
+    "react-native": "0.76.5",
+    "react-native-paper": "^5.12.5",
+    "expo-dev-client": "~5.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
